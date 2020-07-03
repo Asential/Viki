@@ -1,6 +1,6 @@
 import markdown2, os
 import random
-
+from django.contrib import messages
 from django.shortcuts import render
 from markdown2 import Markdown
 from django.http import HttpResponseRedirect
@@ -103,8 +103,9 @@ def submit(request):
     # Compares filenames
     for name in filenames:
         if title.lower() == name.lower():
-            print("ERROR Entry already exists")
-            return index(request)
+            return render(request, "encyclopedia/new.html", {
+                "error":True
+            })
 
     # Sets the name of the file with .md extension
     rename = "%s.md" % title

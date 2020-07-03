@@ -5,19 +5,21 @@
 {% endblock %}
 
 {% block body %}
-
+<div id="data">
     {% if title %}
     <a id="edit" class="btn btn-primary" href="{% url 'edit' title %}">EDIT</a>
-    <div id="data">
+    
     
 
     {{data|safe}}
     
-    </div>
+    
     {% endif %}
     {% if error %}
     
-    <h1>ERROR Page not found!</h1>
+    <h1>Error 404: Page not found!</h1>
+    <div>Please check your query!</div>
     
     {% endif %}
+</div>
 {% endblock %}
