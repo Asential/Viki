@@ -70,7 +70,7 @@ def search(request):
                 
         # Shows all the results if any.        
         if results:
-            return render(request, "encyclopedia/index.html", {
+            return render(request, "encyclopedia/search.html", {
                 "entries": results
             })
 
