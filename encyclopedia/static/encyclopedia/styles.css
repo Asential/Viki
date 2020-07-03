@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 20px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+#textarea, #title{
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+#mainform, #data{
+    padding: 30px;
+}
+
+
+.heading{
+    padding: 25px 30px;
+}
+
+.side, #wiki{
+    padding: 5px 10px;
+}
+
+.side{
+    margin: 10px 0px;
+    background-color: aqua;
+}
+
+#edit{
+    margin: 30px 25px;
+    float: right;
+}

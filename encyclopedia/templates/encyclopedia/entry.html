@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+
+    {% if title %}
+    <a id="edit" class="btn btn-primary" href="{% url 'edit' title %}">EDIT</a>
+    <div id="data">
+    
+
+    {{data|safe}}
+    
+    </div>
+    {% endif %}
+    {% if error %}
+    
+    <h1>ERROR Page not found!</h1>
+    
+    {% endif %}
+{% endblock %}
