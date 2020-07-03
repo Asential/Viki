@@ -10,7 +10,7 @@
     <form id="mainform" action="{% url 'save' title %}" method="POST">
         {% csrf_token %}
         <label>*Use MarkDown for formatting!</label>
-        <textarea id="textarea" class="form-control" rows="6" style="border-top: 1px solid;" name="content" placeholder="Write about the entry!">{{content}}</textarea>
+        <textarea id="textarea" class="form-control" rows="6" style="border-top: 1px solid;  height: 350px;" name="content" placeholder="Write about the entry!">{{content}}</textarea>
         <button id="mit" type="submit" class="btn btn-primary" type="submit">Submit</button>
     </form>
 {% endblock %}
