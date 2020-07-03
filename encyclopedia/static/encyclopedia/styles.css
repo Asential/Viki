@@ -57,7 +57,19 @@ textarea {
 #textarea, #title{
     padding: 15px;
     margin-bottom: 30px;
+    background-color: greenyellow;
+    border: none;
+
 }
+
+
+#mit{
+    background-color: greenyellow;
+    border: none;
+    color: black;
+    border-bottom: 1px solid;
+}
+
 
 #mainform, #data{
     padding: 30px;
@@ -77,20 +89,22 @@ textarea {
     padding: 0px 10px;
 }
 
-.linkA{
+#list{
+    padding-inline-start: 0px;
+}
+
+
+/* .linkA{
     display: block;
     margin: 10px 0px;
     padding: 10px 10px;
     color: black;
     transition: ease 0.3s;
     background-color: greenyellow;
-}
+} */
 
-#list{
-    padding-inline-start: 0px;
-}
 
-.linkB{
+.linkB, .linkA{
     transition: ease 0.3s;
     color: inherit;
     width: 100%;
@@ -109,8 +123,8 @@ textarea {
     margin-top: 5px;
     right: 0;
     background: hotpink;
-    transition: width 0.5s ease;
-    -webkit-transition: width .5s ease;
+    transition: width 0.7s ease;
+    -webkit-transition: width 0.7s ease;
   }
    
   .linkB:hover:after{
@@ -122,6 +136,28 @@ textarea {
   .linkB:hover{
       color: hotpink;
   }
+
+  .linkA:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: hotpink;
+    transition: width 0.3s ease;
+    -webkit-transition: width .3s ease;
+  }
+   
+  .linkA:hover:after{
+    color: hotpink;
+    width: 100%;
+    left: 0;
+    background: hotpink;
+  }
+  .linkA:hover{
+      color: hotpink;
+  }
   
 
 
@@ -129,4 +165,8 @@ textarea {
 #edit{
     margin: 30px 25px;
     float: right;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-bottom: 1px solid;
 }

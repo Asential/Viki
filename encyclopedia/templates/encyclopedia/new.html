@@ -9,8 +9,8 @@
     <h1 class="heading">Make a new Entry!</h1>
     <form id="mainform" action="{% url 'submit' %}" method="POST">
         {% csrf_token %}
-        <input id="title" name="title" type="text" class="form-control" placeholder="Title">
+        <input id="title" style="border-top: 1px solid;" name="title" type="text" class="form-control" placeholder="Title">
         <textarea id="textarea" class="form-control" rows="6" name="content" placeholder="Write about the entry!"></textarea>
-        <button type="submit" class="btn btn-primary" type="submit">Submit</button>
+        <button id="mit" type="submit" class="btn btn-primary" type="submit">Submit</button>
     </form>
 {% endblock %}
