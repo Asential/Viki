@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.shortcuts import render
 from markdown2 import Markdown
 from django.http import HttpResponseRedirect
+from django.urls import reverse
 from . import util
 
 #--------------------------------------------------------------
@@ -52,7 +53,7 @@ def search(request):
     # Checks if item exists to return to item page directly.
     if item:
 
-        return entry(request, item["title"])
+        return HttpResponseRedirect(reverse("entry", kwargs={'entry':item["title"]}))
 
     else:
 
@@ -118,7 +119,7 @@ def submit(request):
     file.write(content)
     file.close()
     
-    return entry(request, title)
+    return HttpResponseRedirect(reverse("entry", kwargs={'entry':title}))
 
 #----------------------------------------------------------------
 
@@ -147,7 +148,7 @@ def save(request, title):
     # we were given a function for saving/creating new files :D
     util.save_entry(title, newContent)
 
-    return entry(request, title)
+    return HttpResponseRedirect(reverse("entry", kwargs={'entry':title}))
 
 #----------------------------------------------------------------
 
@@ -158,4 +159,4 @@ def rand(request):
     # Puts a random title out of all files
     title = random.choice(files)
 
-    return entry(request, title)
+    return HttpResponseRedirect(reverse("entry", kwargs={'entry':title}))
