@@ -6,11 +6,11 @@
 
 {% block body %}
 <div id="data">
-    <h1>All Pages</h1>
+    <h2>All Pages</h2>
 
-    <ul>
+    <ul id="list" style="list-style: none">
         {% for entry in entries %}
-            <a href="{% url 'entry' entry %}"><li>{{ entry }}</li></a>
+            <a class="linkB" style="text-decoration: none;" href="{% url 'entry' entry %}"><li>{{ entry }}</li></a>
         {% endfor %}
     </ul>
 </div>

@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-color: white;
+    background-color: greenyellow;
+    font-family: 'Montserrat', sans-serif;
 }
 
 code {
@@ -21,13 +22,30 @@ textarea {
 }
 
 .search {
+    transition: ease 0.3s;
+    color: inherit;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    display: inline-block;  
+    position: relative;
+    background-color: greenyellow;
     width: 100%;
     font-size: 15px;
     line-height: 15px;
 }
 
+.search::placeholder{
+    color: hotpink;
+}
+  
+  
+  
+
+
+
 .sidebar {
-    background-color: #f0f0f0;
+    border-right: 0.5px solid;
     height: 100vh;
     padding: 20px;
 }
@@ -50,14 +68,63 @@ textarea {
     padding: 25px 30px;
 }
 
-.side, #wiki{
-    padding: 5px 10px;
+#wiki{
+    padding-top: 20px;
+    padding-left: 10px;
 }
 
 .side{
-    margin: 10px 0px;
-    background-color: aqua;
+    padding: 0px 10px;
 }
+
+.linkA{
+    display: block;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    color: black;
+    transition: ease 0.3s;
+    background-color: greenyellow;
+}
+
+#list{
+    padding-inline-start: 0px;
+}
+
+.linkB{
+    transition: ease 0.3s;
+    color: inherit;
+    width: 100%;
+    display: block;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    background-color: greenyellow;   
+    position: relative;
+}
+
+.linkB:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: hotpink;
+    transition: width 0.5s ease;
+    -webkit-transition: width .5s ease;
+  }
+   
+  .linkB:hover:after{
+    color: hotpink;
+    width: 100%;
+    left: 0;
+    background: hotpink;
+  }
+  .linkB:hover{
+      color: hotpink;
+  }
+  
+
+
 
 #edit{
     margin: 30px 25px;
