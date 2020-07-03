@@ -11,16 +11,16 @@
     <body>
         <div class="row" style="margin-left: 0; margin-right: 0;">
             <div class="sidebar col-lg-2 col-md-3">
-                <h1 id="wiki">Wiki</h1>
+                <h1 id="wiki">Viki</h1>
                 <div class="form-group">
                 <form class="side" action="{% url 'search' %}" method="POST">
                     {% csrf_token %}
-                    <input class="search" class="form-group" type="text" name="query" placeholder="Search Encyclopedia">
+                    <input class="search" class="form-group" type="text" name="query" placeholder="Search Viki">
                 </form>
                 </div>
                     <a class="linkA" style="text-decoration: none;" href="{% url 'index' %}">Home</a>
-                    <a class="linkA" style="text-decoration: none;" href="{% url 'new' %}">Create New Page</a>
-                    <a class="linkA" style="text-decoration: none;" href="{% url 'random' %}">Random Page</a>
+                    <a class="linkA" style="text-decoration: none;" href="{% url 'new' %}">Create New Entry</a>
+                    <a class="linkA" style="text-decoration: none;" href="{% url 'random' %}">Random Entry</a>
                 {% block nav %}
                 {% endblock %}
             </div>

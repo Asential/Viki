@@ -22,6 +22,7 @@ textarea {
 }
 
 .search {
+    padding: 10px 0px;
     transition: ease 0.3s;
     color: inherit;
     border: none;
@@ -39,10 +40,6 @@ textarea {
     color: hotpink;
 }
   
-  
-  
-
-
 
 .sidebar {
     border-right: 0.5px solid;
@@ -92,17 +89,6 @@ textarea {
 #list{
     padding-inline-start: 0px;
 }
-
-
-/* .linkA{
-    display: block;
-    margin: 10px 0px;
-    padding: 10px 10px;
-    color: black;
-    transition: ease 0.3s;
-    background-color: greenyellow;
-} */
-
 
 .linkB, .linkA{
     transition: ease 0.3s;
