@@ -5,14 +5,15 @@
 {% endblock %}
 
 {% block body %}
+    
+    <h1 class="heading">Make a new Entry!</h1>
     {% if error %}
        <h3 style="padding-left: 5px; color: tomato; border: 3px solid; margin: 5px 25px; "> Entry with that Title exists!</h3>
     {% endif %}
-    <h1 class="heading">Make a new Entry!</h1>
     <form id="mainform" action="{% url 'submit' %}" method="POST">
         {% csrf_token %}
-        <input id="title" style="border-top: 1px solid;" name="title" type="text" class="form-control" placeholder="Title">
-        <textarea id="textarea" class="form-control" rows="6" name="content" style=" height: 350px;" placeholder="Write about the entry!"></textarea>
+        <input id="title" style="border-top: 1px solid;" name="title" type="text" class="form-control" placeholder="Title" required>
+        <textarea id="textarea" class="form-control" rows="6" name="content" style=" height: 350px;" required placeholder="Write about the entry!"></textarea>
         <button id="mit" type="submit" class="btn btn-primary" type="submit">Submit</button>
     </form>
 {% endblock %}
