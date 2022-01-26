@@ -1,6 +1,3 @@
 # Viki
 
-Hello, I have made the site Viki.
-
-It is a pretty basic site made for project1 of the CS50W Course.
-
+[Website Showcase](https://www.youtube.com/watch?v=o6053s4rzig&ab_channel=FilosophicalFellow)
